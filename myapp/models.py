@@ -43,9 +43,9 @@ class User(AbstractUser):
 
     username = None
     email = models.EmailField(_('email address'), unique=True)
-    employee_id = models.IntegerField(unique=True)
+    employee_id = models.IntegerField(unique=True, blank=True, null=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['employee_id']
+    REQUIRED_FIELDS = []
 
     objects = UserManager()
