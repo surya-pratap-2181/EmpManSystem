@@ -46,6 +46,6 @@ class User(AbstractUser):
     employee_id = models.IntegerField(unique=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['employee_id']
 
     objects = UserManager()
