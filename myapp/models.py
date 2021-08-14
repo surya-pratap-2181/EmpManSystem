@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
+from django.db.models import base
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -50,6 +51,8 @@ class User(AbstractUser):
     date_of_exit = models.DateField(null=True, blank=True)
     department = models.CharField(max_length=200, null=True, blank=True)
     remarks = models.TextField(null=True, blank=True)
+    emp_cv = models.FileField(upload_to='emp_cv', blank=True)
+    emp_images = models.ImageField(upload_to='emp_images', blank=True)
 
 
     USERNAME_FIELD = 'email'

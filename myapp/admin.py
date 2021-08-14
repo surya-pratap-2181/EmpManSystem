@@ -14,7 +14,7 @@ class UserAdmin(DjangoUserAdmin):
         (_('Personal info'), {'fields': ('date_of_birth','first_name', 'last_name')}),
         (_('Details'), {'fields': ('employee_id','emp_ctc','manager_name','department','remarks')}),
         (_('Important dates'), {'fields': ('date_joined', 'date_of_exit')}),
-        
+        (_('Files'), {'fields': ('emp_cv', 'emp_images')}),
         (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser',
                                        'groups', 'user_permissions')}),
     )
