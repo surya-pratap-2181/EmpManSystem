@@ -4,12 +4,13 @@
 {% csrf_token %}
 {% for fm in form %}
 <div class="container mt-5">
-{{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+{{fm.label_tag}} {{fm}} {{fm.errors}} <br><br>
 {% endfor %}
 <input type="submit" value="Login">
 <a href="{% url 'signup' %}" role="button">SignUp</a>
 </div>
 </form>
+
 
 
 {% endblock body %}
